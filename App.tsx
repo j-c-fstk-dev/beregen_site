@@ -4,7 +4,7 @@ import Navigation from './components/Navigation';
 import Home from './components/Home';
 import EcosystemPage from './components/EcosystemPage';
 import Footer from './components/Footer';
-import GeminiAssistant from './components/GeminiAssistant';
+
 
 // Pages
 import About from './components/About';
@@ -95,13 +95,6 @@ const App: React.FC = () => {
           <Route path="/terms" element={<TermsOfService />} />
         </Routes>
         <Footer />
-        
-        {/* 
-          This is an optional AI assistant that uses the Gemini API.
-          It requires REACT_APP_API_KEY or similar process.env setup.
-          If no API key is present, it will gracefully render nothing.
-        */}
-        <GeminiAssistant />
       </main>
     </HashRouter>
   );

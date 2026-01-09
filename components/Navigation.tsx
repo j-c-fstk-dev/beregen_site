@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, Globe } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 import { NAV_ITEMS } from '../constants';
 import Button from './Button';
 import { useNavigate, useLocation } from 'react-router-dom';
@@ -70,15 +70,7 @@ const Navigation: React.FC = () => {
                 {item.label}
               </a>
             ))}
-            
-            {/* Language Switcher */}
-            <button className={`p-2 rounded-full mx-1 transition-colors ${
-               isScrolled 
-                 ? 'text-regen-stone hover:bg-stone-100 hover:text-regen-dark' 
-                 : 'text-regen-dark hover:bg-regen-accent/10 hover:text-regen-accent'
-            }`} aria-label="Switch Language">
-              <Globe className="w-5 h-5" />
-            </button>
+
 
             <div className="ml-2">
                <Button href="/contact" variant={isScrolled ? 'accent' : 'accent'} size="sm" className={!isScrolled ? 'shadow-none' : ''}>
@@ -89,10 +81,7 @@ const Navigation: React.FC = () => {
 
           {/* Mobile Toggle */}
           <div className="flex items-center gap-4 md:hidden z-50">
-             {/* Mobile Language Switcher */}
-             <button className={`p-1 ${isMenuOpen || isScrolled ? 'text-regen-dark' : 'text-regen-dark'}`}>
-                <Globe className="w-5 h-5" />
-             </button>
+
 
             <button 
               className="p-1"
