@@ -61,7 +61,7 @@ const RegenImpactHubSection: React.FC = () => {
              {/* Fieldwork Image */}
              <div className="relative rounded-3xl overflow-hidden shadow-2xl border border-white/10 bg-white/5 backdrop-blur-sm p-2">
                 <img 
-                  src="https://images.unsplash.com/photo-1596788069359-54b67060505b?q=80&w=2574&auto=format&fit=crop" 
+                  src="https://images.unsplash.com/photo-1506905925346-21bda4d32df4?q=80&w=2574&auto=format&fit=crop" 
                   alt="Fieldwork and Nature" 
                   className="w-full h-auto rounded-2xl opacity-90 hover:opacity-100 transition-opacity duration-500"
                 />

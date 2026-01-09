@@ -48,7 +48,7 @@ const Navigation: React.FC = () => {
         <div className={`rounded-full px-6 py-3 flex justify-between items-center transition-all duration-500 ${isScrolled ? 'bg-white/80 backdrop-blur-xl shadow-lg border border-white/20' : 'bg-transparent'}`}>
           
           {/* Logo */}
-          <a href="/" onClick={(e) => handleNavClick(e, '/')} className={`text-2xl font-serif font-bold tracking-tight z-50 transition-colors ${isScrolled || isMenuOpen ? 'text-regen-dark' : 'text-white'} cursor-pointer`}>
+          <a href="/" onClick={(e) => handleNavClick(e, '/')} className={`text-2xl font-serif font-bold tracking-tight z-50 transition-colors ${isScrolled || isMenuOpen ? 'text-regen-dark' : 'text-regen-dark'} cursor-pointer`}>
             BeRegen
           </a>
 
@@ -60,11 +60,11 @@ const Navigation: React.FC = () => {
                 href={item.href}
                 onClick={(e) => handleNavClick(e, item.href)}
                 className={`px-4 py-2 rounded-full text-sm font-medium transition-all cursor-pointer ${
-                  isActive(item.href) ? 'bg-white/20 font-bold' : ''
+                  isActive(item.href) ? 'bg-regen-accent/20 font-bold text-regen-dark' : ''
                 } ${
                   isScrolled 
                     ? 'text-regen-stone hover:text-regen-dark hover:bg-stone-100' 
-                    : 'text-white/90 hover:text-white hover:bg-white/10'
+                    : 'text-regen-dark hover:text-regen-accent hover:bg-regen-accent/10'
                 }`}
               >
                 {item.label}
@@ -75,7 +75,7 @@ const Navigation: React.FC = () => {
             <button className={`p-2 rounded-full mx-1 transition-colors ${
                isScrolled 
                  ? 'text-regen-stone hover:bg-stone-100 hover:text-regen-dark' 
-                 : 'text-white/80 hover:bg-white/10 hover:text-white'
+                 : 'text-regen-dark hover:bg-regen-accent/10 hover:text-regen-accent'
             }`} aria-label="Switch Language">
               <Globe className="w-5 h-5" />
             </button>
@@ -90,7 +90,7 @@ const Navigation: React.FC = () => {
           {/* Mobile Toggle */}
           <div className="flex items-center gap-4 md:hidden z-50">
              {/* Mobile Language Switcher */}
-             <button className={`p-1 ${isMenuOpen || isScrolled ? 'text-regen-dark' : 'text-white'}`}>
+             <button className={`p-1 ${isMenuOpen || isScrolled ? 'text-regen-dark' : 'text-regen-dark'}`}>
                 <Globe className="w-5 h-5" />
              </button>
 
@@ -101,7 +101,7 @@ const Navigation: React.FC = () => {
               {isMenuOpen ? (
                 <X className="w-6 h-6 text-regen-dark" />
               ) : (
-                <Menu className={`w-6 h-6 ${isScrolled ? 'text-regen-dark' : 'text-white'}`} />
+                <Menu className={`w-6 h-6 ${isScrolled ? 'text-regen-dark' : 'text-regen-dark'}`} />
               )}
             </button>
           </div>
